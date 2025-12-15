@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afya Bora Hub</title>
+
+    <--Tag-->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "bCkoLUjwiuGHfrT1U",
+      });
+   })();
+</script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,6 +93,81 @@
             text-align: center;
             padding: 15px;
         }
+
+
+.card {
+        max-width: 650px;
+        background: #fff;
+        margin: auto;
+        padding: 25px 30px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    }
+
+    h2 {
+        text-align: center;
+        color: #444;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    label {
+        font-weight: 600;
+        color: #555;
+    }
+
+    input, select, textarea, button {
+        width: 90%;
+        padding: 13px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background: #fafafa;
+        font-size: 15px;
+        transition: 0.2s;
+    }
+
+    button {
+        margin-top: 20px;
+        background: #444;
+        border: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 14px;
+    }
+
+    #selectedTags {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        background: #eaeaea;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tag button {
+        background: #888;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+        
     </style>
 </head>
 <body>
@@ -137,16 +225,38 @@
         <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Ushuhuda wa Wateja"></iframe>
     </section>
 
-    <section id="order">
-        <h2>Agiza Bidhaa Yako sasa</h2>
-        <form>
-            <input type="text" name="jina" placeholder="Jina lako kamili" required>
-            <input type="text" name="namba" placeholder="Namba ya simu/WhatsApp" required>
-            <input type="text" name="bidhaa" placeholder="Jina la bidhaa unayotaka" required>
-            <textarea name="maelezo" placeholder="Maelezo ya ziada (hiari)"></textarea>
-            <button type="submit">Tuma Oda</button>
-        </form>
-    </section>
+  <div class="card">
+    <h2>Order Request Form</h2>
+
+    <form id="proForm">
+
+        <label>Name / Company</label>
+        <input type="text" id="name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required><br>
+
+        <label style="margin-top:20px;">Phone Number</label>
+        <input type="text" id="phone" placeholder="07XXXXXXXX" required>
+
+        <label style="margin-top:20px;">Select Products</label>
+        <select id="productSelect">
+            <option value="">-- Select Product --</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Phone">Phone</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Smart Watch">Smart Watch</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+
+        <div id="selectedTags"></div>
+
+        <label style="margin-top:20px;">Description</label>
+        <textarea id="desc" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
     <section id="contact">
         <h2>Wasiliana Nasi kupitia mitandao ya kijamii</h2>
@@ -166,5 +276,65 @@
     <p>&copy; 2025/2026 Healing Touch Tz. Haki zote zimehifadhiwa.</p>
 </footer>
 
+    <script>
+let selectedProducts = [];
+
+const select = document.getElementById("productSelect");
+const tagContainer = document.getElementById("selectedTags");
+
+// Select product
+select.addEventListener("change", function () {
+    const product = this.value;
+
+    if (product && !selectedProducts.includes(product)) {
+        selectedProducts.push(product);
+        addTag(product);
+    }
+
+    this.value = "";
+});
+
+// Add tag UI
+function addTag(product) {
+    const tag = document.createElement("div");
+    tag.classList.add("tag");
+    tag.innerHTML = `${product} <button onclick="removeTag('${product}')">x</button>`;
+    tagContainer.appendChild(tag);
+}
+
+// Remove tag
+function removeTag(product) {
+    selectedProducts = selectedProducts.filter(p => p !== product);
+    tagContainer.innerHTML = "";
+    selectedProducts.forEach(p => addTag(p));
+}
+
+// Form submit
+document.getElementById("proForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    sendMail();
+});
+
+// EmailJS
+function sendMail(){
+    let templateparms = {
+        name  : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        phone : document.getElementById("phone").value,
+        selectedTags : selectedProducts.join(", "),
+        desc : document.getElementById("desc").value
+    };
+
+    emailjs.send("service_oh4jqr5", "template_4gml8an", templateparms)
+    .then(()=>{
+        alert("Email sent successfully!");
+    })
+    .catch(()=>{
+        alert("Failed to send email. Try again.");
+    });
+}
+</script>
+
 </body>
+    
 </html>
