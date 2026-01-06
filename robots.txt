@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://healing-touch-kappa.vercel.app/sitemap.xml
