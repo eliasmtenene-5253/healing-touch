@@ -1,347 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
 <head>
-    <!--dont delete starts-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healing Touch company</title>    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Healing Touch Tz — Asili • Afya • Ustawi</title>
 
-    <--Meta tags-->
+  <!-- Verification & SEO -->
   <meta name="google-site-verification" content="KtMeMUtvFkf-ssC_A0_JB2_RaSkD9TWWKWwX35Dewwo" />
-  <meta name="title" content="Healing Touch: Reliable Provider of Natural Healing Medicines">
-  <meta name="description" content="Healing Touch is a trusted natural and herbal medicine company committed to improving health and wellness. Discover safe, effective remedies crafted to support natural healing and promote a balanced, healthy life.">
-  <meta name="keywords" content="Healing Touch, healing touch medicine, herbal medicine company, natural medicine, traditional medicine, holistic healing, wellness products, herbal remedies, alternative medicine, natural health solutions, healing touch Tanzania">
-  <meta name="author" content="Healing Touch – Natural Health & Wellness Partner">
+  <meta name="description" content="Healing Touch — kampuni ya dawa asilia inayotoa tiba salama na za ufanisi. Tunatoa ushauri wa afya, tiba za asili kwa matatizo ya tumbo, uzazi, nguvu za kiume, na uzito." />
+  <meta name="keywords" content="Healing Touch, dawa asilia, tiba za jadi, afya, herbal remedies, Tanzania" />
+  <meta name="author" content="Healing Touch Tz" />
 
-        <link rel="icon" href="1.jfif" type="image/x-icon"> type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "bCkoLUjwiuGHfrT1U",
-      });
-   })();
-</script>
-        <!--dont delete starts-->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #535096ef;
-        }
-        header {
-            background-color: #2d612d;
-            color: rgb(19, 162, 228);
-            padding: 30px 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #7cac7c;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: rgb(8, 2, 2);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            padding: 20px;
-        }
-        section {
-            background-color: rgb(243, 242, 242);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        h2 {
-            color: #006400;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        iframe {
-            width: 100%;
-            height: 300px;
-            margin-top: 10px;
-        }
-        form {
-            display: grid;
-            gap: 10px;
-        }
-        input, textarea, button {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #006400;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: hsla(120, 36%, 23%, 0.843);
-        }
-        footer {
-            background-color: #006400;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
+  <link rel="icon" href="1.jfif" type="image/x-icon" />
 
+  <!-- EmailJS (browser) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS once script loads (deferred)
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.emailjs && typeof emailjs.init === 'function') {
+        emailjs.init('bCkoLUjwiuGHfrT1U');
+      }
+    });
+  </script>
 
-.card {
-        max-width: auto;
-        background: #fff;
-        margin: auto;
-        padding: 25px 30px;
-        border-radius: 14px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  <style>
+    :root{
+      --brand-strong: #1f6a1f;
+      --brand-mid: #7cac7c;
+      --accent: #e9f7ed;
+      --muted: #6b6b6b;
+      --bg: #f5f6fb;
+      --card: #ffffff;
+      --radius: 12px;
+      --max-width: 980px;
     }
 
-    h2 {
-        text-align: center;
-        color: #444;
-        margin-bottom: 20px;
-        font-weight: 700;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f6f7fb 0%, #e9eef7 100%);
+      color:#1b1b1b;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
     }
 
-    label {
-        font-weight: 600;
-        color: #555;
+    .site{
+      max-width:var(--max-width);
+      margin:24px auto;
+      padding:20px;
     }
 
-    input, select, textarea, button {
-        width: auto;
-        padding: 13px;
-        margin-top: 6px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        background: #fafafa;
-        font-size: 15px;
-        transition: 0.2s;
+    header {
+      background: linear-gradient(90deg,var(--brand-strong), var(--brand-mid));
+      color:#fff;
+      padding:22px;
+      border-radius: var(--radius);
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    header .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    header img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+    header h1{margin:0;font-size:1.25rem}
+    header p{margin:0;font-size:0.9rem;opacity:0.95}
+
+    nav{
+      margin:18px 0;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+    nav a{
+      padding:8px 12px;
+      background:var(--card);
+      color:var(--brand-strong);
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:600;
+      border:1px solid rgba(0,0,0,0.05);
+    }
+    nav a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,106,31,0.08)}
+
+    main{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:900px){ main {grid-template-columns: 1fr 420px;} }
+
+    section, .card {
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(18,24,40,0.04);
     }
 
-    button {
-        margin-top: 20px;
-        background: #444;
-        border: none;
-        color: #fff;
-        font-size: 17px;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 8px;
-        padding: 14px;
-    }
+    h2{margin-top:0;color:var(--brand-strong)}
+    .intro ul{padding-left:1.25rem;color:var(--muted)}
+    img.responsive{width:100%;border-radius:8px;display:block;margin-top:10px}
 
-    #selectedTags {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+    /* Form styles */
+    .card form{display:flex;flex-direction:column;gap:10px}
+    label{font-weight:600;color:#333}
+    input[type="text"], input[type="email"], textarea, select{
+      padding:10px 12px;border-radius:8px;border:1px solid #e2e6ef;background:#fbfdff;
+      font-size:0.95rem;
     }
-
-    .tag {
-        background: #eaeaea;
-        padding: 8px 12px;
-        border-radius: 20px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    .row{display:flex;gap:10px}
+    .row .col{flex:1}
+    button[type="submit"]{
+      background:var(--brand-strong);color:#fff;padding:12px 14px;border-radius:10px;border:none;font-weight:700;
+      cursor:pointer;
     }
+    button[disabled]{opacity:0.6;cursor:default}
 
-    .tag button {
-        background: #888;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        font-size: 12px;
+    #selectedTags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+    .tag{background:#f0f8f5;padding:6px 10px;border-radius:20px;display:flex;gap:8px;align-items:center}
+    .tag button{background:#c3d7c3;border:0;border-radius:50%;width:22px;height:22px;cursor:pointer}
+
+    .notice{padding:10px;border-radius:8px;background:#f2fff2;color:#1b6b1b;font-weight:600;display:none}
+    .error{background:#fff2f2;color:#8b1b1b;display:none}
+
+    footer{
+      text-align:center;margin-top:18px;color:#374151;font-size:0.9rem;
     }
-
-        
-    </style>
+  </style>
 </head>
+
 <body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <img src="https://via.placeholder.com/96x96?text=HT" alt="Healing Touch logo">
+        <div>
+          <h1>Healing Touch Tz</h1>
+          <p>Huduma za Kuaminika — Jali Afya Yako</p>
+        </div>
+      </div>
+      <div style="text-align:right;font-size:0.9rem">
+        <strong>📞</strong> 0627454430<br>
+        <a href="mailto:eliasmtenene@gmail.com" style="color:#fff;text-decoration:underline">eliasmtenene@gmail.com</a>
+      </div>
+    </header>
 
-<header>
-    <h1>Healing Touch Tz</h1>
-    <p>Huduma za Kuaminika, jari Afya Yako</p>
-</header>
+    <nav aria-label="Main navigation">
+      <a href="#home">Nyumbani</a>
+      <a href="#products">Bidhaa</a>
+      <a href="#testimonials">Ushuhuda</a>
+      <a href="#order">Agiza</a>
+      <a href="#contact">Wasiliana</a>
+    </nav>
 
-<nav>
-    <a href="#home">Nyumbani</a>
-    <a href="#products">Bidhaa</a>
-    <a href="#testimonials">Ushuhuda</a>
-    <a href="#order">Agiza</a>
-    <a href="#contact">Wasiliana Nasi</a>
-</nav>
-
-<div class="container">
-
-    <section id="home">
-        <h2>Karibu Healing Touch tz</h2>
-        <p>Tunatoa dawa  zilizothibitishwa kusaidia matatizo ya afya kama:</p>
-        <ul>
+    <main>
+      <div>
+        <section id="home" class="intro" aria-labelledby="home-heading">
+          <h2 id="home-heading">Karibu Healing Touch</h2>
+          <p>Tunatoa dawa na tiba asili zilizothibitishwa kusaidia matatizo kama:</p>
+          <ul>
             <li>Vidonda vya tumbo</li>
             <li>Matatizo ya nguvu za kiume</li>
-            <li>matatizo ya mfumo wa uzazi kwa wanawake</li>
-            <li>mfumo wa mmeng'enyo wa chakula</li>
-            <li>Bawa sili</li>
-            <li>choo kigumu na kikavu, tumbo kujaa gesi</li>
-            <li>kupunguza uzito</li>
-            <li>ushauri wa kidaktari unatolewa bure</li>
-        </ul>
-    </section>
+            <li>Matatizo ya mfumo wa uzazi kwa wanawake</li>
+            <li>Matatizo ya mmeng'enyo wa chakula</li>
+            <li>Matatizo ya choo, gesi tumboni na kujaa</li>
+            <li>Kupunguza uzito kwa njia salama</li>
+            <li>Ushauri wa daktari unaotolewa bila malipo</li>
+          </ul>
+        </section>
 
-    <section id="products">
-        <h2>Bidhaa Zetu</h2>
+        <section id="products" aria-labelledby="products-heading">
+          <h2 id="products-heading">Bidhaa Zetu</h2>
 
-        <h3>Dawa ya Vidonda vya Tumbo</h3>
-        <p>Husaidia kupunguza maumivu, kuponya vidonda na kurekebisha mmeng’enyo wa chakula.</p>
-        <img src="https://via.placeholder.com/400x200?text=Vidonda+vya+Tumbo" alt="Dawa ya Vidonda vya Tumbo">
+          <article>
+            <h3>Dawa za Vidonda vya Tumbo</h3>
+            <p>Tiba za asili kusaidia kupunguza maumivu, kuponya vidonda na kurekebisha mmeng'enyo.</p>
+            <img class="responsive" src="https://via.placeholder.com/800x350?text=Vidonda+vya+Tumbo" alt="Bidhaa za vidonda vya tumbo">
+          </article>
 
-        <h3>Dawa ya Nguvu za Kiume</h3>
-        <p>Hurejesha nguvu, huongeza stamina na kuimarisha uwezo wa kurudia tendo la ndoa.</p>
-        <img src="https://via.placeholder.com/400x200?text=Nguvu+za+Kiume" alt="Dawa ya Nguvu za Kiume">
+          <article>
+            <h3>Dawa za Nguvu za Kiume</h3>
+            <p>Dawa za kuongeza stamina na kurejesha uwezo wa kiume kwa mazoezi ya asili.</p>
+            <img class="responsive" src="https://via.placeholder.com/800x350?text=Nguvu+za+Kiume" alt="Dawa za nguvu za kiume">
+          </article>
 
-        <h3>Dawa ya Uzazi</h3>
-        <p>Husaidia kuongeza mbegu za kiume au uwezo wa kupata ujauzito kwa wanawake.</p>
-        <img src="https://via.placeholder.com/400x200?text=Uzazi+na+Fertility" alt="Dawa ya Uzazi">
-    </section>
+          <article>
+            <h3>Dawa za Uzazi na Uzalishaji</h3>
+            <p>Tabia za asili zinazounga mkono uzazi salama na afya ya uzazi kwa wanawake.</p>
+            <img class="responsive" src="https://via.placeholder.com/800x350?text=Uzazi+na+Fertility" alt="Bidhaa za uzazi">
+          </article>
+        </section>
 
-    <section id="testimonials">
-        <h2>Ushuhuda wa Wateja</h2>
-        <p>"Nilikuwa na vidonda vya tumbo kwa miaka mingi, lakini baada ya kutumia dawa yenu, maumivu yamepungua kabisa." – Juma, Arusha</p>
-        <p>"Nguvu zangu zimerudi na najisikia kijana tena. Nashukuru Afya Bora Hub kwa dawa bora!" – Salum, Dodoma</p>
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Ushuhuda wa Wateja"></iframe>
-    </section>
+        <section id="testimonials" aria-labelledby="testimonials-heading">
+          <h2 id="testimonials-heading">Ushuhuda wa Wateja</h2>
+          <p class="muted">"Nilikuwa na vidonda vya tumbo kwa miaka, baada ya kutumia dawa yenu, maumivu yamepungua." – Juma, Arusha</p>
+          <p class="muted">"Nguvu zangu zimerudi, najisikia kijana tena." – Salum, Dodoma</p>
+          <div style="margin-top:10px">
+            <iframe width="100%" height="260" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Ushuhuda wa Wateja" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
 
-  <div class="card">
-    <h2>Order Request Form</h2>
+      <aside>
+        <div class="card" id="order" aria-labelledby="order-heading">
+          <h2 id="order-heading">Oda / Maulizo</h2>
 
-    <form id="proForm">
+          <div class="notice" id="successNotice" role="status" aria-live="polite"></div>
+          <div class="error" id="errorNotice" role="alert" aria-live="assertive"></div>
 
-        <label>Name / Company</label>
-        <input type="text" id="name" required>
+          <form id="proForm" novalidate>
+            <label for="name">Jina / Kampuni</label>
+            <input id="name" name="name" type="text" placeholder="Jina lako au jina la kampuni" required>
 
-        <label>Email</label>
-        <input type="email" id="email" placeholder="example@gmail.com" required><br>
+            <label for="email">Barua pepe</label>
+            <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
 
-        <label style="margin-top:20px;">Phone Number</label>
-        <input type="text" id="phone" placeholder="07XXXXXXXX" required>
+            <label for="phone">Nambari ya simu (Tz)</label>
+            <input id="phone" name="phone" type="text" placeholder="07XXXXXXXX" pattern="^(?:0|\+255)?7\d{8}$" required>
 
-        <label style="margin-top:20px;">Select Products</label>
-        <select id="productSelect">
-            <option value="">-- Select Product --</option>
-            <option value="Laptop">Laptop</option>
-            <option value="Phone">Phone</option>
-            <option value="Tablet">Tablet</option>
-            <option value="Smart Watch">Smart Watch</option>
-            <option value="Accessories">Accessories</option>
-        </select>
+            <label for="productSelect">Chagua bidhaa</label>
+            <select id="productSelect" aria-describedby="productHelp">
+              <option value="">-- Chagua Bidhaa --</option>
+              <option value="Vidonda vya tumbo">Vidonda vya tumbo</option>
+              <option value="Nguvu za kiume">Nguvu za kiume</option>
+              <option value="Dawa za uzazi">Dawa za uzazi</option>
+              <option value="Dawa za kupunguza uzito">Dawa kupunguza uzito</option>
+              <option value="Vitamini na virutubisho">Vitamini / Virutubisho</option>
+            </select>
+            <div id="productHelp" style="font-size:0.9rem;color:var(--muted)">Chagua bidhaa moja kwa wakati, kisha bonyeza ili iongezwe kwenye orodha ya bidhaa uliyochagua.</div>
 
-        <div id="selectedTags"></div>
+            <div id="selectedTags" aria-live="polite" aria-atomic="true"></div>
 
-        <label style="margin-top:20px;">Description</label>
-        <textarea id="desc" rows="4" required></textarea>
+            <label for="desc">Maelezo (Adresa, Ujazo, matumizi)</label>
+            <textarea id="desc" name="desc" rows="4" placeholder="Taja maelezo ya oda au maulizo ya ziada" required></textarea>
 
-        <button type="submit">Submit</button>
-    </form>
-</div>
+            <button type="submit" id="submitBtn">Tuma Oda</button>
+          </form>
 
-    <section id="contact">
-        <h2>Wasiliana Nasi kupitia mitandao ya kijamii</h2>
+          <p style="font-size:0.85rem;color:var(--muted);margin-top:12px">Tunahifadhi faraghani maelezo yako. Tutakujibu kupitia simu au barua pepe.</p>
+        </div>
 
-        <p>Teregram: Healing Touch Tz</p> 
-        <p>Instagram: Healing Touch Tz</p> 
-        <p>Facebook: Healing Touch Tz</p>  
+        <div class="card" style="margin-top:12px">
+          <h3 id="contact">Wasiliana Nasi</h3>
+          <p>📞 Simu/WhatsApp: <strong>0627454430</strong></p>
+          <p>📧 Baruapepe: <a href="mailto:eliasmtenene@gmail.com">eliasmtenene@gmail.com</a></p>
+          <p>📍 Tunatuma dawa kote Tanzania. Ushauri wa msingi unatolewa bila malipo.</p>
+        </div>
+      </aside>
+    </main>
 
-        <p>📞 Simu/WhatsApp: 0627454430</p>
-        <p>📧 Baruapepe\Email: eliasmtenene@gmail.com</p>
-        <p>📍 Ofsi zetu zinapatikana Tanzania nzima, na tunatuma dawa popote ulipo kwa uaminifu wa Hali ya juu.</p>
-    </section>
+    <footer>
+      &copy; <span id="year"></span> Healing Touch Tz. Haki zote zimehifadhiwa.
+    </footer>
+  </div>
 
-</div>
+  <script>
+    // Small helpers & UI
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<footer>
-    <p>&copy; 2025/2026 Healing Touch Tz. Haki zote zimehifadhiwa.</p>
-</footer>
+    const productSelect = document.getElementById('productSelect');
+    const tagContainer = document.getElementById('selectedTags');
+    const submitBtn = document.getElementById('submitBtn');
+    const successNotice = document.getElementById('successNotice');
+    const errorNotice = document.getElementById('errorNotice');
+    let selectedProducts = [];
 
-    <script>
-let selectedProducts = [];
-
-const select = document.getElementById("productSelect");
-const tagContainer = document.getElementById("selectedTags");
-
-// Select product
-select.addEventListener("change", function () {
-    const product = this.value;
-
-    if (product && !selectedProducts.includes(product)) {
-        selectedProducts.push(product);
-        addTag(product);
+    function updateTags(){
+      tagContainer.innerHTML = '';
+      selectedProducts.forEach(p=>{
+        const el = document.createElement('span');
+        el.className = 'tag';
+        el.innerHTML = `${p} <button aria-label="Remove ${p}" data-product="${p}">×</button>`;
+        tagContainer.appendChild(el);
+      });
     }
 
-    this.value = "";
-});
-
-// Add tag UI
-function addTag(product) {
-    const tag = document.createElement("div");
-    tag.classList.add("tag");
-    tag.innerHTML = `${product} <button onclick="removeTag('${product}')">x</button>`;
-    tagContainer.appendChild(tag);
-}
-
-// Remove tag
-function removeTag(product) {
-    selectedProducts = selectedProducts.filter(p => p !== product);
-    tagContainer.innerHTML = "";
-    selectedProducts.forEach(p => addTag(p));
-}
-
-// Form submit
-document.getElementById("proForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    sendMail();
-});
-
-// EmailJS
-function sendMail(){
-    let templateparms = {
-        name  : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        phone : document.getElementById("phone").value,
-        selectedTags : selectedProducts.join(", "),
-        desc : document.getElementById("desc").value
-    };
-
-    emailjs.send("service_oh4jqr5", "template_4gml8an", templateparms)
-    .then(()=>{
-        alert("Email sent successfully!");
-    })
-    .catch(()=>{
-        alert("Failed to send email. Try again.");
+    tagContainer.addEventListener('click', (e)=>{
+      if (e.target.tagName === 'BUTTON') {
+        const p = e.target.getAttribute('data-product');
+        selectedProducts = selectedProducts.filter(x => x !== p);
+        updateTags();
+      }
     });
-}
-</script>
 
+    productSelect.addEventListener('change', ()=>{
+      const v = productSelect.value;
+      if (v && !selectedProducts.includes(v)) {
+        selectedProducts.push(v);
+        updateTags();
+      }
+      productSelect.value = '';
+    });
+
+    // Basic client-side validation
+    function validateForm(data){
+      // Name/email/phone/desc required
+      if (!data.name.trim()) return 'Tafadhali weka jina au kampuni.';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(data.email)) return 'Tafadhali weka barua pepe sahihi.';
+      const phoneRegex = /^(?:0|\+255)?7\d{8}$/;
+      if (!phoneRegex.test(data.phone)) return 'Tafadhali weka nambari ya simu ya Tanzania (07XXXXXXXX).';
+      if (!data.desc.trim()) return 'Tafadhali weka maelezo ya oda.';
+      return '';
+    }
+
+    // EmailJS send
+    async function sendMail(data){
+      // Ensure emailjs is ready
+      if (!window.emailjs || typeof emailjs.send !== 'function') {
+        throw new Error('Email service haipo. Hakikisha umeunganishwa EmailJS.');
+      }
+      // serviceID, templateID — replace if you want different
+      const serviceID = 'service_oh4jqr5';
+      const templateID = 'template_4gml8an';
+      return emailjs.send(serviceID, templateID, data);
+    }
+
+    document.getElementById('proForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successNotice.style.display = 'none';
+      errorNotice.style.display = 'none';
+
+      const templateParams = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        selectedTags: selectedProducts.join(', ') || '—',
+        desc: document.getElementById('desc').value.trim()
+      };
+
+      const validationMessage = validateForm(templateParams);
+      if (validationMessage) {
+        errorNotice.textContent = validationMessage;
+        errorNotice.style.display = 'block';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Inatuma...';
+
+      try {
+        await sendMail(templateParams);
+        successNotice.textContent = 'Oda imewasilishwa. Tutawasiliana nawe hivi karibuni.';
+        successNotice.style.display = 'block';
+        errorNotice.style.display = 'none';
+        // Reset form
+        document.getElementById('proForm').reset();
+        selectedProducts = [];
+        updateTags();
+      } catch (err) {
+        console.error(err);
+        errorNotice.textContent = 'Imeshindikana kutuma. Jaribu tena au tuma barua pepe: eliasmtenene@gmail.com';
+        errorNotice.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Tuma Oda';
+      }
+    });
+  </script>
 </body>
-    
 </html>
